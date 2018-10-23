@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fram"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/a9bed3"
+    android:orientation="vertical">
+
+    <!--<com.example.kf.thetest.drawview.BaseDragZoomImageView-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:src="@mipmap/mapbg"-->
+    <!--android:scaleType="matrix"-->
+    <!--android:visibility="visible" />-->
+    <ImageView
+        android:id="@+id/img_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/mapbg"
+        android:visibility="gone" />
+
+    <com.example.kf.thetest.drawview.DragView
+        android:id="@+id/image_dragview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/mapbg"
+        android:visibility="gone" />
+
+    <com.example.kf.thetest.drawview.CustomView
+        android:id="@+id/view_dragview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/a9bed3"
+        android:src="@mipmap/mapbg"
+        android:visibility="visible" />
+
+</FrameLayout>

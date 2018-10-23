@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kf.thetest.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CalendarView android:id="@+id/cal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:firstDayOfWeek="3"
+        android:shownWeekCount="7"
+        android:visibility="gone"
+        android:focusedMonthDateColor="#FF8000"
+        android:selectedWeekBackgroundColor="#9BFFFF"
+        android:weekSeparatorLineColor="#0000FF"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:mcv_calendarMode="month"
+        app:mcv_selectionColor="#00F"
+        app:mcv_showOtherDates="all"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+<com.example.kf.thetest.animal.DynamicWave
+    android:layout_width="match_parent"
+    android:layout_height="50dp"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:background="@drawable/shape_chart"/>-->
+    <RadioButton
+        android:id="@+id/rd"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="60dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:button="@drawable/select_radiobutton"
+        />
+</RelativeLayout>

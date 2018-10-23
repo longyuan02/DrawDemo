@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="确定" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/outstr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/imgPoint1"
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_alignBottom="@+id/outstr1"
+                android:layout_marginBottom="3dp"
+                android:layout_toRightOf="@+id/outstr1"
+                android:background="@drawable/shape_blackcircle" />
+
+            <TextView
+                android:id="@+id/outstr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/imgPoint1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/outstr3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/outstr2"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="取消" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dedede" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.kf.thetest.select.PickerScrollView
+            android:id="@+id/picker"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imgPoint"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_blackcircle" />
+
+        <com.example.kf.thetest.select.PickerScrollView
+            android:id="@+id/picker2"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <com.example.kf.thetest.select.PickerScrollView
+            android:id="@+id/picker3"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示选择"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="手机号登陆" />
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="账号登陆" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000000" />
+
+        <EditText
+            android:id="@+id/edt_accountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"/>
+
+        <EditText
+            android:id="@+id/edt_ps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入密码"/>
+
+        <LinearLayout
+            android:id="@+id/ln_vc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/edt_input_vc"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:hint="输入验证码"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="6"
+                android:maxLines="6"
+                android:paddingLeft="23dp"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_vc"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/img_fresh"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_erro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="#ff0000"/>
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:text="登陆"/>
+
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TheTest</string>
+    <string name="generate_code">生成二维码</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kf.thetest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--选择器-->
+        <!--com.example.kf.thetest.select.SelectActivity-->
+
+        <!--com.example.kf.thetest.MainActivity-->
+        <!--com.example.kf.thetest.calendar.CalendarActivity 自定日历-->
+        <!--com.example.kf.thetest.webview.WebViewTest-->
+        <!--JSoupHtmlActivity-->
+        <!--com.example.kf.thetest.servicetest.ServiceActivity 服务-->
+        <!--com.example.kf.thetest.webview.JSoupHtmlActivity 注入html方法测试-->
+        <!--com.example.kf.thetest.webview.WebviewClickActivity 监听点击事件测试-->
+        <!--com.example.kf.thetest.sqlite.SQLiteTestActivity sqlite测试-->
+        <!--com.example.kf.thetest.viewpage.ViewPageActiivty viewpage-->
+        <!--com.example.kf.thetest.languageexchange.MainActivity 设置语言-->
+        <!--com.example.kf.thetest.horizontallistview.TableActivity 固定列头listview-->
+        <!--com.example.kf.thetest.qx.MainActivity  二维码-->
+        <!--LuJinSuoWebviewActivity-->
+        <!--com.example.kf.thetest.filepath.FilePathKTActivity 跳转到手机根目录-->
+        <!--com.example.kf.thetest.drawview.DrawViewActivity-->
+        <activity android:name="com.example.kf.thetest.drawview.DrawViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--com.example.kf.thetest.crosswiselistviewdelet.CrossWiseActivity-->
+        <!--横向删除-->
+        <activity android:name="com.example.kf.thetest.crosswiselistviewdelet.CrossWiseActivity"></activity>
+        <service android:name=".MyService">
+            <intent-filter>
+                <!-- 系统启动完成后会调用-->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".servicetest.NotificationClickReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+            </intent-filter>
+
+        </receiver>
+        <receiver android:name="com.example.kf.thetest.MyBroadcastReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".servicetest.ToastService" />
+    </application>
+
+</manifest>
